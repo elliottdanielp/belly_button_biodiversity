@@ -101,6 +101,7 @@ function buildCharts(sample) {
       annotations: [{
         xref: 'paper',
         yref: 'paper',
+        marker: {color: 'rgb(55, 83, 109)'},
         x: 0.5,
         xanchor: 'center',
         y: -0.25,
