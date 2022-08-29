@@ -126,6 +126,7 @@ function buildCharts(sample) {
       }
     }];
     console.log(bubbleData);
+    
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: 'Bacteria Cultures Per Sample',
