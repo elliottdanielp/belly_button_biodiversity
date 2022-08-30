@@ -87,7 +87,12 @@ function buildCharts(sample) {
     var barData = [{
       x: sampleValues.slice(0,10).reverse(),
       text: otuLabels.slice(0,10).reverse(),
+      marker: {
+        color: 'rgb(17,181,211)',
+        width: 1
+      },
       type: "bar"
+      
     }];
 
     // 9. Create the layout for the bar chart. 
@@ -105,7 +110,7 @@ function buildCharts(sample) {
         xanchor: 'center',
         y: -0.25,
         yanchor: 'center',
-        text: 'The bar chart displays the top 10 bacterial species (OTUs)<br>with the number of samples found in your belly button',
+        text: 'Chart shows top 10 bacterial species (OTUs)<br>with number of samples found in belly button',
         showarrow: false
       }]
     };
@@ -122,7 +127,7 @@ function buildCharts(sample) {
       marker: {
         size: sampleValues,
         color: otuIds,
-        colorscale: "Earth"
+        colorscale: "Electric"
       }
     }];
     console.log(bubbleData);
@@ -163,13 +168,13 @@ function buildCharts(sample) {
             tickvals: [0,2,4,6,8,10],
             ticktext: [0,2,4,6,8,10]
           },
-          bar: {color: "black"},
+          bar: {color: 'rgb(187,222,251)'},
           steps: [
-            { range: [0, 2], color: "red" },
-            { range: [2, 4], color: "orange" },
-            { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "lime" },
-            { range: [8, 10], color: "green" }]
+            { range: [0, 2], color: 'rgb(248,187,208)' },
+            { range: [2, 4], color: 'rgb(244,143,177)' },
+            { range: [4, 6], color: 'rgb(240,98,146)' },
+            { range: [6, 8], color: 'rgb(236,64,122)' },
+            { range: [8, 10], color: 'rgb(233,30,99)' }]
         }
       }
     ];
@@ -184,7 +189,7 @@ function buildCharts(sample) {
         xanchor: 'center',
         y: 0,
         yanchor: 'center',
-        text: "The gauge displays your belly button weekly washing frequency",
+        text: "Gauge displays needed belly button washes every week",
         showarrow: false
       }]
     };
